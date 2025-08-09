@@ -26,9 +26,11 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: '*',
-  credentials: true
-}));
+  origin: process.env.NODE_ENV === 'production' ? 'https://sixninegame.netlify.app
+' : '*',
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+} ));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
