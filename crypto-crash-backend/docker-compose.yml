@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://mongo:27017/crypto-crash
+      - COINGECKO_API_URL=https://api.coingecko.com/api/v3
+      - CACHE_DURATION=10000
+      - GAME_ROUND_DURATION=10000
+      - MAX_CRASH_MULTIPLIER=120
+    depends_on:
+      - mongo
+    restart: unless-stopped
+    networks:
+      - crypto-crash-network
+
+  mongo:
+    image: mongo:5.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+    networks:
+      - crypto-crash-network
+    environment:
+      - MONGO_INITDB_DATABASE=crypto-crash
+
+volumes:
+  mongo_data:
+
+networks:
+  crypto-crash-network:
+    driver: bridge
+

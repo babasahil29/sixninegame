@@ -1,0 +1,13 @@
+{
+  "name": "crypto-crash-scripts",
+  "version": "1.0.0",
+  "description": "Database seeding and utility scripts for Crypto Crash backend",
+  "scripts": {
+    "seed": "node seedDatabase.js",
+    "seed:clear": "node seedDatabase.js --clear-only",
+    "seed:players": "node seedDatabase.js --players-only"
+  },
+  "author": "Sahil",
+  "license": "ISC"
+}
+
