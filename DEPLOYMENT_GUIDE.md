@@ -1,7 +1,6 @@
 # Crypto Crash - Complete Deployment Guide
 
-**Author:** Manus AI  
-**Version:** 1.0  
+**Author:**Yekkaloor Baba Sahil
 **Date:** August 8, 2025
 
 ## Table of Contents
