@@ -255,7 +255,7 @@ For issues and questions:
 
 ---
 
-**Built with ❤️ by Manus AI**
+**Built with ❤️ by Sahil**
 
 *Ready to crash? Start your engines and may the odds be in your favor!* 🚀
 
